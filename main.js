@@ -8,3 +8,10 @@ header()
 let h1 = document.querySelector('h1')
 
 h1.innerHTML = `Welcome ${user.name} ${user.surname}`
+
+
+
+function creatTr () {
+    
+}
+
