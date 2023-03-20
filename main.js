@@ -11,7 +11,10 @@ h1.innerHTML = `Welcome ${user.name} ${user.surname}`
 
 
 
+let transactions = document.querySelector('.transactions')
+
 function creatTr () {
-    
+    let table = document.createElement('table')
+    let tr = document
 }
 
