@@ -1,7 +1,7 @@
-import {header} from '/modules/header'
+import { header } from '/modules/header'
 let user = JSON.parse(localStorage.getItem('user'))
 
-if(!user) {
+if (!user) {
     location.assign('/pages/login.html')
 }
 header()
@@ -11,10 +11,9 @@ h1.innerHTML = `Welcome ${user.name} ${user.surname}`
 
 
 
-let transactions = document.querySelector('.transactions')
+let place = document.querySelector('.transactions table')
 
-function creatTr () {
-    let table = document.createElement('table')
-    let tr = document
+function creatTr() {
+
 }
 
