@@ -6,3 +6,56 @@
     box-sizing: border-box;
     font-family: 'Montserrat';
 }
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+:root {
+    --blue-main: #0047FF
+}
+
+.center {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 450px;
+    margin-bottom: 40px;
+
+    input {
+        all: unset;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 20px 25px;
+        text-align: start;
+        &::placeholder {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+    }
+
+    button {
+        all: unset;
+        padding: 20px 25px;
+        background-color: var(--blue-main);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+}
