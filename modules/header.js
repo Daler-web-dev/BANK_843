@@ -7,9 +7,9 @@ export function header(params) {
   let header = document.createElement("div");
 
   let left_side = document.createElement("div");
-  let spanMain = document.createElement("span");
-  let spanWallet = document.createElement("span");
-  let spanTrans = document.createElement("span");
+  let spanMain = document.createElement("a");
+  let spanWallet = document.createElement("a");
+  let spanTrans = document.createElement("a");
 
   let right_side = document.createElement("div");
   let spanEmail = document.createElement("span");
@@ -29,6 +29,8 @@ export function header(params) {
   spanTrans.innerHTML = "Мои транзакции";
   spanEmail.innerHTML = "alexadams@google.com";
   imgExit.src = "./icons/logOut.svg";
+  spanWallet.href = "/pages/wallets.html"
+  spanMain.href = "/index.html"
 
   body.prepend(header);
   header.append(left_side, right_side);
@@ -44,6 +46,8 @@ export function header(params) {
   };
 
   btnExit.onclick = () => {
+    localStorage.clear()
+    location.assign('/pages/login.html')
     closeModal();
   };
 

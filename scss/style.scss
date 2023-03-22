@@ -104,3 +104,51 @@ body .i .container {
     flex-direction: column;
     gap: 30px;
 }
+.wrapper {
+    width: 70%;
+    margin: 40px auto;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+    button {
+        all: unset;
+        background-color: #0047FF;
+        color: white;
+        font-size: 18px;
+        padding: 18px 100px;
+        border-radius: 14px;
+        margin-left: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        &:active {
+            scale: .8;
+        }
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        padding-left: 20px;
+    
+        .card-item {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            border-radius: 30px;
+            background: linear-gradient(84.37deg, #5F0A87 2.27%, #A4508B 92.26%);
+            padding: 20px;
+            height: 160px;
+    
+    
+            h2, span {
+                color: white;
+            }
+    
+        }
+    
+    }
+}
