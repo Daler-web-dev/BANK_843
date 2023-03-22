@@ -40,6 +40,7 @@ form {
         border: 1px solid black;
         padding: 20px 25px;
         text-align: start;
+
         &::placeholder {
             font-size: 18px;
             font-weight: bold;
@@ -57,5 +58,49 @@ form {
         border-radius: 10px;
         text-align: center;
     }
+}
 
+.card {
+    color: white;
+    width: 270px;
+    height: 170px;
+    border-radius: 15px;
+    background: linear-gradient(84.37deg, #D7816A 2.27%, #BD4F6C 92.26%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h1,
+h3 {
+    padding: 0px 20px;
+}
+
+#a {
+    color: #0047FF;
+}
+
+.i {
+    padding: 10px 10px;
+    width: 90%;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 400px;
+    background-color: green;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body .i .container {
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    height: 250px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
