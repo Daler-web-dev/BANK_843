@@ -34,9 +34,10 @@
 
 	<script type="module">
 		import { header } from "/modules/header";
-		import {cardReload} from '/modules/ui'
-		import { getData } from '/modules/HTTP.reuest'		
+		import { cardReload } from '/modules/ui'
+		import { getData } from '/modules/HTTP.reuest'
 
+	    cardReload()
 		//////////////////////
 		let user = JSON.parse(localStorage.getItem('user'))
 		if (!user) location.assign('/pages/login.html')
@@ -47,7 +48,8 @@
 
 		getData("/cards?user_id=" + user.id)
 			.then(res => cardReload(res, cardCont))
-    </script>
+
+	</script>
 </body>
 
 </html>

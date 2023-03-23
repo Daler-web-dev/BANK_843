@@ -18,15 +18,24 @@
 				<div class="container">
 					<h1>Добавить кошелек</h1>
 					<input type="text" placeholder="Имя" />
+					<input type="text" placeholder="Сколько" />
 					<input type="text" placeholder="Валюта" />
-					<button id="addBtn">Добавить</button>
+					<!-- <a href="/pages/wallets.html">
+						<button id="addBtn">Добавить</button>
+					</a> -->
+					<!-- <a href="/pages/wallets.html">
+						<button id="addBtn">Добавить</button>
+					</a> -->
+					<button id="addBtn">
+						<a href="/pages/wallets.html" class="white">Добавить</a>
+					</button>
 				</div>
 			</form>
 		</center>
 	</div>
 
-	<script type="module" >
-		import {getSymbols} from '/modules/HTTP.reuest'
+	<script type="module">
+		import { getSymbols } from '/modules/HTTP.reuest'
 		// getSymbols()
 	</script>
 </body>
