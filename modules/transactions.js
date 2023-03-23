@@ -8,6 +8,12 @@ axios.get("http://localhost:3000/transactions")
             creatTransactions(res)
         }
     })
+// axios.get(import.meta.env.VITE_BASE_URL + "/transactions")
+//     .then(res => {
+//         if (res.status === 200 || res.status === 201) {
+//             creatTransactions(res.data)
+//         }
+//     })
 
 
 
