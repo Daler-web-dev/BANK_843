@@ -34,7 +34,7 @@ form {
     width: 450px;
     margin-bottom: 40px;
 
-    input {
+    input, #currency {
         all: unset;
         border-radius: 10px;
         border: 1px solid black;
@@ -58,6 +58,12 @@ form {
         border-radius: 10px;
         text-align: center;
     }
+
+    #currency {
+        width: 340px;
+        padding: 25px;
+    }
+    
 }
 
 .card {
@@ -73,7 +79,8 @@ form {
 
 .card h1,
 h3 {
-    padding: 0px 20px;
+    padding: 10px 20px;
+    color: white;
 }
 
 #a {
@@ -97,8 +104,8 @@ body .i .container {
 }
 
 .card {
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;

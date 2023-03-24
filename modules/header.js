@@ -1,3 +1,6 @@
+let user = JSON.parse(localStorage.getItem('user'))
+
+
 export function header(params) {
   let body = document.body;
   let modal = document.querySelector(".modal");
@@ -27,7 +30,7 @@ export function header(params) {
   spanMain.innerHTML = "Главная";
   spanWallet.innerHTML = "Мои кошельки";
   spanTrans.innerHTML = "Мои транзакции";
-  spanEmail.innerHTML = "alexadams@google.com";
+  spanEmail.innerHTML = user.email;
   imgExit.src = "./icons/logOut.svg";
   spanWallet.href = "/pages/wallets.html"
   spanMain.href = "/index.html"

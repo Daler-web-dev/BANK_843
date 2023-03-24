@@ -2,12 +2,13 @@ import axios from "axios"
 
 let tbody = document.querySelector('.transactioons table tbody')
 
-// axios.get(import.meta.env.VITE_BASE_URL + "/transactions")
-//     .then(res => {
-//         if (res.status === 200 || res.status === 201) {
-//             creatTransactions(res.data)
-//         }
-//     })
+
+axios.get(import.meta.env.VITE_BASE_URL + "/transactions")
+    .then(res => {
+        if (res.status === 200 || res.status === 201) {
+            creatTransactions(res.data)
+        }
+    })
 
 
 
