@@ -1,9 +1,30 @@
 import axios from 'axios'
 import { cardReload } from './ui';
-import { getData } from './HTTP.reuest';
+import { getCurrencies, getData } from './HTTP.reuest';
 export let form = document.forms.add_wallet
 let user = JSON.parse(localStorage.getItem('user'))
+let currency = document.querySelector('#symbols')
+let symbols = JSON.parse(localStorage.getItem('symbols'))
 
+
+if(!symbols) {
+    getCurrencies()
+        .then(res => {
+            if(res.status === 200 || res.status === 201) {
+                localStorage.setItem('symbols', JSON.stringify(res.data.currencies))
+                createOpt(res.data.currencies)       
+            }
+        })
+} else {
+    createOpt(symbols)
+}
+
+function createOpt(arr) {
+    for(let key in arr) {
+        let opt = new Option(key, key)
+        currency.append(opt)
+    }
+}
 
 export function postCard() {
     form.onsubmit = (event) => {

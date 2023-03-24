@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "email": "daler@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "3545343sdadsadsadsad",
+      "id": 1
+    },
+    {
+      "email": "kamron@gmail.com",
+      "name": "Kamron",
+      "surname": "Xasanzoda",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "nazif@gmail.com",
+      "name": "Nazif",
+      "surname": "Jamshedov",
+      "password": "4444",
+      "id": 3
+    }
+  ],
+  "cards": [
+    {
+      "id": 12312312,
+      "user_id": "",
+      "name": "Visa",
+      "currency": "USD",
+      "total": 10000
+    },
+    {
+      "user_id": 1,
+      "name": "VISA",
+      "currency": "UZS",
+      "total": "100000",
+      "id": 12312313
+    },
+    {
+      "user_id": 1,
+      "name": "XojikBank",
+      "currency": "USD",
+      "total": "15000",
+      "id": 12312314
+    },
+    {
+      "user_id": 3,
+      "name": "VISA",
+      "currency": "UZS",
+      "total": "15000",
+      "id": 12312315
+    },
+    {
+      "user_id": 1,
+      "name": "Crypto",
+      "currency": "BTC",
+      "total": "5",
+      "id": 12312316
+    }
+  ],
+  "transactions": []
+}
