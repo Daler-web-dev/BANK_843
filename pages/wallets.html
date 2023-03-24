@@ -15,7 +15,6 @@
 	<div id="app">
 		<center>
 		</center>
-
 		<div class="wrapper">
 			<h3>Мои кошельки</h3>
 			<div class="card-container"></div>
@@ -34,10 +33,10 @@
 
 	<script type="module">
 		import { header } from "/modules/header";
-		import { cardReload } from '/modules/ui'
+		import { createcard } from '/modules/ui'
 		import { getData } from '/modules/HTTP.reuest'
 
-	    cardReload()
+		createcard(user, user.id)
 		//////////////////////
 		let user = JSON.parse(localStorage.getItem('user'))
 		if (!user) location.assign('/pages/login.html')
@@ -48,6 +47,12 @@
 
 		getData("/cards?user_id=" + user.id)
 			.then(res => cardReload(res, cardCont))
+
+		const { data } = await axios.post('/user', document.querySelector('#my-form'), {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
 
 	</script>
 </body>

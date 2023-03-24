@@ -14,5 +14,4 @@ export function cardReload(arr, place) {
             </div>
         `
     }
-
 }
