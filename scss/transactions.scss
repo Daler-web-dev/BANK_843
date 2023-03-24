@@ -4,28 +4,17 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-	margin-left: 20%;
-	margin-bottom: 70px;
-}
-
-.transactions {
-	max-width: 1920px;
-	margin: 0 auto;
     margin-left: 20%;
     margin-bottom: 70px;
 }
 
-.transactions {
+.transactioons {
     max-width: 1920px;
     margin: 0 auto;
 }
 
-.transactions table {
+.transactioons table {
     width: 70%;
-	max-width: 1920px;
-	margin: 0 auto;
-
-	& thead tr th {
     max-width: 1920px;
     margin: 0 auto;
 
@@ -36,7 +25,6 @@
         font-size: 14px;
         line-height: 17px;
         color: #B9C0D1;
-	}
     }
 
     & tbody tr td {
