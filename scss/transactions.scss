@@ -1,29 +1,41 @@
 .transactions__title {
     font-family: 'Gilroy';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: bold;
+    font-size: 40px;
     line-height: 29px;
-	margin-left: 20%;
-	margin-bottom: 70px;
+	margin-left: 16%;
+	margin-bottom: 50px;
+    margin-top: 50px;
 }
 
-.transactioons {
+.transactions {
 	max-width: 1920px;
 	margin: 0 auto;
     margin-left: 20%;
     margin-bottom: 70px;
+
+    .gmail {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        text-decoration: none;
+        color: rgba(0, 71, 255, 1);
+        margin-left: 16%;
+    }
 }
 
-.transactioons {
+.transactions {
     max-width: 1920px;
     margin: 0 auto;
 }
 
-.transactioons table {
+.transactions table {
     width: 70%;
 	max-width: 1920px;
 	margin: 0 auto;
+    margin-top: 40px;
+
 
 	& thead tr th {
     max-width: 1920px;
@@ -37,11 +49,65 @@
         line-height: 17px;
         color: #B9C0D1;
 	}
-    }
+    }   
 
     & tbody tr td {
         text-align: center;
     }
+}
 
+.transactions__btn {
+    all: unset;
+    cursor: pointer;
+    padding: 20px 25px;
+    background-color: var(--blue-main);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 16%;
+    margin-top: 40px;
 
+    &:active {
+        scale: .8;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 450px;
+    margin-top: 100px;
+
+    input, .currency {
+        all: unset;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 20px 25px;
+        text-align: start;
+
+        &::placeholder {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+    }
+
+    #addBtn {
+        all: unset;
+        cursor: pointer;
+        padding: 20px 25px;
+        background-color: var(--blue-main);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        text-align: center;
+
+        &:active {
+            scale: .8;
+        }
+    }    
 }

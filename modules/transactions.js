@@ -12,7 +12,7 @@ axios.get(import.meta.env.VITE_BASE_URL + "/transactions")
 
 
 
-function creatTransactions(arr) {
+export function creatTransactions(arr) {
     for (let item of arr) {
         let tr = document.createElement('tr')
         let idTd = document.createElement('td')

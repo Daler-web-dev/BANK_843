@@ -34,6 +34,7 @@ export function header(params) {
   imgExit.src = "./icons/logOut.svg";
   spanWallet.href = "/pages/wallets.html"
   spanMain.href = "/index.html"
+  spanTrans.href = "/pages/transactions.html"
 
   body.prepend(header);
   header.append(left_side, right_side);
