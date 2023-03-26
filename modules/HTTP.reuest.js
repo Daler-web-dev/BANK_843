@@ -10,7 +10,7 @@ export async function getData(resource) {
 
 export async function getCurrencies() {
   console.log(import.meta.env.VITE_API_KEY);
-    const res = await axios.get("https://api.apilayer.com/currency_data/list", {
+    const res = await axios.get("https://apilayer.com/marketplace/currency_data-api?live_demo=show", {
       redirect: 'follow',
       headers: {apikey: import.meta.env.VITE_API_KEY}
     })

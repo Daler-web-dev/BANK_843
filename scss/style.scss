@@ -7,6 +7,12 @@
     font-family: 'Montserrat';
 }
 
+body, #app {
+    margin: 0 auto;
+    max-width: 1920px;
+    position: relative;
+}
+
 .container {
     max-width: 1920px;
     margin: 0 auto;
@@ -154,7 +160,9 @@ body .i .container {
             h2, span {
                 color: white;
             }
-    
+            h3 {
+                transform: translate(-20px , 0px);
+            }
         }
     
     }

@@ -4,6 +4,8 @@ import { cardReload, creatTransactions } from '/modules/ui'
 let h1 = document.querySelector('h1')
 let cardCont = document.querySelector('.card-container')
 let tbody = document.querySelector('tbody')
+let wrapper = document.querySelector('.wrapper')
+let userGmail = document.createElement('span')
 
 //////////////////////
 let user = JSON.parse(localStorage.getItem('user'))

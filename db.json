@@ -57,6 +57,13 @@
       "currency": "BTC",
       "total": "5",
       "id": 12312316
+    },
+    {
+      "user_id": 3,
+      "name": "34",
+      "currency": "USD",
+      "total": "500",
+      "id": 12312317
     }
   ],
   "transactions": [
