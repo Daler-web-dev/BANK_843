@@ -31,7 +31,7 @@ export function header(params) {
   spanWallet.innerHTML = "Мои кошельки";
   spanTrans.innerHTML = "Мои транзакции";
   spanEmail.innerHTML = user.email;
-  imgExit.src = "./icons/logOut.svg";
+  imgExit.src = "/public/icons/log-out.svg";
   spanWallet.href = "/pages/wallets.html"
   spanMain.href = "/index.html"
   spanTrans.href = "/pages/transactions.html"

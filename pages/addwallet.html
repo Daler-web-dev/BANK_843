@@ -15,11 +15,10 @@
                     <div class="container">
                         <h1>Добавить кошелек</h1>
                         <input type="text" placeholder="Имя" name="name">
-                        <select name="currency" id="currency">
-                            <option value="RUB">RUB</option>
-                            <option value="UZS">UZS</option>
-                            <option value="USD">USD</option>
-                        </select>
+                        <input name="currency" list="symbols" id="currency" value="USD" >
+                        <datalist id="symbols">
+                          
+                        </datalist>
                         <input type="text" placeholder="Сумма" name="total">
                         <button id="addBtn">Добавить</button>
                     </div>

@@ -17,3 +17,26 @@ export function cardReload(arr, place) {
     }
 
 }
+
+
+export function creatTransactions(arr, tbody) {
+    tbody.innerHTML = ""
+
+    for (let item of arr) {
+        let tr = document.createElement('tr')
+        let idTd = document.createElement('td')
+        let cardTd = document.createElement('td')
+        let categoryTd = document.createElement('td')
+        let priceTd = document.createElement('td')
+        let whenTd = document.createElement('td')
+
+        idTd.innerHTML = arr.indexOf(item) + 1
+        cardTd.innerHTML = item.card_name
+        categoryTd.innerHTML = item.category
+        priceTd.innerHTML = item.total
+        whenTd.innerHTML = item.data
+
+        tbody.append(tr)
+        tr.append(idTd, cardTd, categoryTd, priceTd, whenTd)
+    }
+}
