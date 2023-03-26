@@ -7,12 +7,12 @@ let currency = document.querySelector('#symbols')
 let symbols = JSON.parse(localStorage.getItem('symbols'))
 
 
-if(!symbols) {
+if (!symbols) {
     getCurrencies()
         .then(res => {
-            if(res.status === 200 || res.status === 201) {
+            if (res.status === 200 || res.status === 201) {
                 localStorage.setItem('symbols', JSON.stringify(res.data.currencies))
-                createOpt(res.data.currencies)       
+                createOpt(res.data.currencies)
             }
         })
 } else {
@@ -20,7 +20,7 @@ if(!symbols) {
 }
 
 function createOpt(arr) {
-    for(let key in arr) {
+    for (let key in arr) {
         let opt = new Option(key, key)
         currency.append(opt)
     }

@@ -18,7 +18,6 @@ export function cardReload(arr, place) {
 
 }
 
-
 export function creatTransactions(arr, tbody) {
     tbody.innerHTML = ""
 

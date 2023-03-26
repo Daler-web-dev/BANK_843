@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/scss/header.scss" />
+    <link rel="stylesheet" href="/scss/style.scss" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <h2>Мои транзакции</h2>
+            <div class="useremail"></div>
+            <div class="tranzaktion-container"></div>
+            <a href="/pages/addwallet.html">
+                <button>Добавить транзакцию</button>
+            </a>
+        </div>
+        <div class="modal">
+            <h2>Вы точно хотите покинуть ?</h2>
+            <div class="btns">
+                <button class="btnOut">Нет</button>
+                <button class="btnExit">Да</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { header } from "/modules/header";
+        import { creatTransactions } from '/modules/ui'
+        import { getData } from '/modules/HTTP.reuest'
+
+        //////////////////////
+        let user = JSON.parse(localStorage.getItem('user'))
+        if (!user) location.assign('/pages/login.html')
+        header()
+        //////////////////////
+
+		let tranzactioncont = document.querySelector('.tranzaktion-contaier')
+
+        getData("/cards?user_id=" + user.id)
+            .then(res => creatTransactions(res, tranzactioncont))
+
+        let userEmail = document.querySelector('.useremail')
+        let email = document.createElement('a')
+        email.innerHTML = `${user.email}`
+        userEmail.append(email)    
+    </script>
+</body>
+
+</html>

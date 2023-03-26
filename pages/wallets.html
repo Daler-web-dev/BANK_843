@@ -34,7 +34,7 @@
 
 	<script type="module">
 		import { header } from "/modules/header";
-		import {cardReload} from '/modules/ui'
+		import { cardReload } from '/modules/ui'
 		import { getData } from '/modules/HTTP.reuest'
 
 		//////////////////////
@@ -47,8 +47,8 @@
 
 		getData("/cards?user_id=" + user.id)
 			.then(res => cardReload(res, cardCont))
-
-    </script>
+			
+	</script>
 </body>
 
 </html>

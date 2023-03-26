@@ -31,7 +31,8 @@ export function header(params) {
   spanWallet.innerHTML = "Мои кошельки";
   spanTrans.innerHTML = "Мои транзакции";
   spanEmail.innerHTML = user.email;
-  imgExit.src = "./icons/logOut.svg";
+  imgExit.src = "https://www.svgrepo.com/show/21304/logout.svg";
+  spanTrans.href = "/pages/tranzaktion.html"
   spanWallet.href = "/pages/wallets.html"
   spanMain.href = "/index.html"
 
