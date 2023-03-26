@@ -18,8 +18,7 @@ form.onsubmit = (e) => {
 				if(res.status === 200 || res.status === 201) {
 					window.location.assign("/pages/login.html");
 				}
-			})
-	} else {
+			}) } else {
 		alert("Error");
 	}
 };

@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <div id="app">
         <center>
             <form name="add_wallet">
@@ -28,6 +29,31 @@
         </center>
     </div>
     <script src="/modules/addwallet.js" type="module"></script>
+=======
+	<div id="app">
+		<center>
+			<form name="add_wallet">
+				<div class="container">
+					<h1>Добавить кошелек</h1>
+
+					<form name="pushing">
+						<input type="text" placeholder="Имя" />
+						<input type="text" placeholder="Сколько" />
+						<input type="text" placeholder="Валюта" />
+						<button id="addBtn"><a href="/pages/wallets.html" class="white">Добавить</a></button>
+					</form>
+				</div>
+			</form>
+		</center>
+	</div>
+
+	<script type="module">
+		let form = document.form.add_wallet
+		console.log(form);
+		import { getSymbols } from '/modules/HTTP.reuest'
+		// getSymbols()
+	</script>
+>>>>>>> 67d56bc43b5a923af691608f10872bb0cfdda7f2
 </body>
 
 </html>

@@ -13,8 +13,12 @@
   },
   "dependencies": {
     "axios": "^1.3.4",
+<<<<<<< HEAD
     "concurrently": "^7.6.0",
     "json-server": "^0.17.3",
+=======
+    "env": "^0.0.2",
+>>>>>>> 67d56bc43b5a923af691608f10872bb0cfdda7f2
     "sass": "^1.59.2"
   }
 }

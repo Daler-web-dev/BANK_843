@@ -15,6 +15,7 @@ export function cardReload(arr, place) {
             </div>
         `
     }
+<<<<<<< HEAD
 
 }
 
@@ -38,4 +39,6 @@ export function creatTransactions(arr, tbody) {
         tbody.append(tr)
         tr.append(idTd, cardTd, categoryTd, priceTd, whenTd)
     }
+=======
+>>>>>>> 67d56bc43b5a923af691608f10872bb0cfdda7f2
 }
