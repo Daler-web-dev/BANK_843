@@ -40,12 +40,13 @@ form {
     width: 450px;
     margin-bottom: 40px;
 
-    input, #currency {
+    input, #currency, select {
         all: unset;
         border-radius: 10px;
         border: 1px solid black;
         padding: 20px 25px;
         text-align: start;
+        width: 100%;
 
         &::placeholder {
             font-size: 18px;
