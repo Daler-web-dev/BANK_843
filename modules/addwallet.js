@@ -7,6 +7,11 @@ let currency = document.querySelector('#symbols')
 let symbols = JSON.parse(localStorage.getItem('symbols'))
 
 
+//////////////////////
+if (!user) location.assign('/pages/login.html')
+//////////////////////
+
+
 if(!symbols) {
     getCurrencies()
         .then(res => {
