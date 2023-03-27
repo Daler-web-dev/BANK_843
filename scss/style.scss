@@ -109,10 +109,11 @@
 }
 
 center {
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
     margin-top: 200px;
     text-align: center;
+    padding: 50px;
 }
 
 h1 {
@@ -122,9 +123,9 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
-    width: 550px;
-    margin-bottom: 40px;
+    padding: 40px;
     input, #currency {
         all: unset;
         border-radius: 10px;

@@ -6,6 +6,7 @@ let h3 = document.querySelector('.gmail')
 let cardCont = document.querySelector('.card-container')
 let tbody = document.querySelector('tbody')
 let spanEml = document.querySelector('.gmail')
+let form = document.forms.add_transaction
 
 
 //////////////////////
@@ -18,12 +19,41 @@ spanEml.innerHTML = user.email
 //////////////////////
 
 getData("/cards?user_id=" + user.id)
-    .then(data => cardReload(data, cardCont))
+.then(data => cardReload(data, cardCont))
 /////////
 
-getData("/transactions?user_id=" + user.id)
-    .then(res => creatTransactions(res, tbody))
+function postTrans() {
+    form.onsubmit = (event) => {
+        event.preventDefault();
+        
+        let trans = {
+            user_id: user.id,
+            data: '2023-03-27'
+        };
+        
+        let fm = new FormData(form);
+        
+        fm.forEach((value, key) => {
+            trans[key] = value;
+        });
 
+        if (trans.card_name && trans. total&& trans.currency) {
+            axios.post('http://localhost:3000/transactions', trans)
+                .then(res => {
+                    if (res.status === 200 || res.status === 201) {
+                        window.location.assign("/pages/transaction.html");
+                        getData(
+                            "/transactions?user_id=" + user.id)
+                            .then(res => creatTransactions(res, tbody))                        
+                    }
+                })
+        } else {
+            alert("Error");
+        }
+    }
+}
+
+postTrans()
 
 
 
