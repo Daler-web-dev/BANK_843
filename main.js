@@ -1,61 +1,29 @@
-let body = document.body
-let modal = document.querySelector('.modal')
-let btnOut = document.querySelector('.btnOut')
-let btnExit = document.querySelector('.btnExit')
-
-let header = document.createElement('div')
-
-let left_side = document.createElement('div')
-let spanMain = document.createElement('span')
-let spanWallet = document.createElement('span')
-let spanTrans = document.createElement('span')
-
-let right_side = document.createElement('div')
-let spanEmail = document.createElement('span')
-let imgExit = document.createElement('img')
-
-header.classList.add('header')
-left_side.classList.add('left_side')
-spanMain.classList.add('spanMin')
-spanWallet.classList.add('spanWallet')
-spanTrans.classList.add('spanTrans')
-right_side.classList.add('right_side')
-spanEmail.classList.add('spanEmail')
-imgExit.classList.add('imgExit')
-
-spanMain.innerHTML = 'Главная'
-spanWallet.innerHTML = 'Мои кошельки'
-spanTrans.innerHTML = 'Мои транзакции'
-spanEmail.innerHTML = 'alexadams@google.com'
-imgExit.src = './icons/logOut.svg'
-
-body.append(header)
-header.append(left_side, right_side)
-left_side.append(spanMain, spanWallet, spanTrans)
-right_side.append(spanEmail, imgExit)
-
-imgExit.onclick = () => {
-    openModal()
-}
-
-btnOut.onclick = () => {
-    closeModal()
-}
-
-btnExit.onclick = () => {
-    closeModal()
-}
-
-function openModal () {
-    modal.style.display = 'block'
-
-    setTimeout(() => {
-       modal.style.opacity = '1'
-       modal.style.transform = 'transform: translate(-50%, -50%) scale(1)'
-    },200)
-}
+import { getData } from './modules/HTTP.reuest'
+import { header } from '/modules/header'
+import { cardReload, creatTransactions } from '/modules/ui'
+let h1 = document.querySelector('h1')
+let h3 = document.querySelector('.gmail')
+let cardCont = document.querySelector('.card-container')
+let tbody = document.querySelector('tbody')
+let spanEml = document.querySelector('.gmail')
 
 
-function closeModal () {
-    modal.style.display = 'none'
-}
+//////////////////////
+let user = JSON.parse(localStorage.getItem('user'))
+if (!user) location.assign('/pages/login.html')
+header()
+h1.innerHTML = `Welcome ${user.name} ${user.surname}`
+h3.innerHTML = user.email
+spanEml.innerHTML = user.email
+//////////////////////
+
+getData("/cards?user_id=" + user.id)
+    .then(data => cardReload(data, cardCont))
+/////////
+
+getData("/transactions?user_id=" + user.id)
+    .then(res => creatTransactions(res, tbody))
+
+
+
+
