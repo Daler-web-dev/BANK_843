@@ -64,6 +64,20 @@
       "currency": "USD",
       "total": "500",
       "id": 12312317
+    },
+    {
+      "user_id": 1,
+      "card": "VISA",
+      "total": "100000",
+      "category": "food",
+      "id": 12312318
+    },
+    {
+      "user_id": 1,
+      "card": "VISA",
+      "total": "15000",
+      "category": "food",
+      "id": 12312319
     }
   ],
   "transactions": [

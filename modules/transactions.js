@@ -1,9 +1,12 @@
 import axios from "axios"
+import {header} from '/modules/header'
 
-let tbody = document.querySelector('.transactioons table tbody')
+let tbody = document.querySelector('.transactions table tbody')
+let user = JSON.parse(localStorage.getItem('user'))
 
+header()
 
-axios.get(import.meta.env.VITE_BASE_URL + "/transactions")
+axios.get(import.meta.env.VITE_BASE_URL + "/transactions?user_id=" + user.id)
     .then(res => {
         if (res.status === 200 || res.status === 201) {
             creatTransactions(res.data)

@@ -6,7 +6,7 @@ let user = JSON.parse(localStorage.getItem('user'))
 
 let select = document.querySelector('.currency')
 
-axios.get(import.meta.env.VITE_BASE_URL + "/cards")
+axios.get(import.meta.env.VITE_BASE_URL + "/cards?user_id=" + user.id )
     .then(res => {
         if (res.status === 200 || res.status === 201) {
             getOptions(res.data)
@@ -35,13 +35,13 @@ form.onsubmit = (event) => {
         trans[key] = value;
     });
 
-    if (trans.card && trans.currency && trans.total) {
+    console.log(trans);
+
+    if (trans.card && trans.category && trans.total) {
         axios.post('http://localhost:3000/cards', trans)
             .then(res => {
                 if (res.status === 200 || res.status === 201) {
-                    window.location.assign("/pages/transactions.html");
-                    getData("/users?transactions=" + user.id)
-                        .then(data => creatTransactions(data))
+                    location.assign("/pages/transactions.html");
                 }
             })
     } else {
